@@ -1,0 +1,60 @@
+//-----------------------------------------------
+
+Robert Loquinario - rloquina@ucsc.edu
+Lab #1 
+Due April 16, 2017
+CMPE 12L Section B 
+MW 11:00 AM - 1:00 PM 
+TA: Max Lichtenstein
+
+//-----------------------------------------------
+
+Title: Intro to Logic with Multimedia Logic
+
+Purpose: 
+
+The objective of this lab is to learn how to use the Multimedia Logic application in windows. By learning
+how to use the app I will gain experience designing combinatorial logic circuits and use combinatorial 
+logic as part of more complex circuits. 
+
+Procedure:
+
+First doing the tutorial for Part A I found it very easy to use MML to create a simple circuit with a 
+switch and LED. With the switch as the only input deciding the state of the LED, on or off. Completing 
+part A gave me an idea of how to use MML for the following parts. 
+
+Part B allowed me to see the hardware interpretation of binary. Using 4 switches as inputs, with LED 
+lights to show if a switch is on, connected to a number generator. The number is based on binary, meaning 
+powers of two. This part of the lab helped me understand number generation using switches in a circuit.
+To answer how would I would make my own 7-segment display, I would use 7 LEDs in the shape of the 7 
+segments and logic gates activating only when the part of the segment is suppose to be lit. 
+
+Part C was more challenging in the aspect that I had to transform a truth table into logic gates. Using 
+switches as the the 3 inputs and one LED light as the output. I decided to use disjunctive normal form to 
+create a formula for the truth table. At first I wasn't sure what to do then I then simplified it to
+
+			A'B' + B(A'C+AC')
+
+To convert my logic into gates, I tackled the formula in two parts A'B' and B(A'C+AC'). for A'B' I had a 
+wire from A and B to an XOR gate to only allow A'B' to have the LED light up. For B(A'C + AC')
+I knew for this B had to be true so I put a wire from B into an AND gate. I had A and C 
+connected to an XOR gate, since (A'C + AC') signified only one of them being true, to be connect to the 
+other slot for the AND gate. 
+
+Part D was a little easier in which I had to create a number guessing game using MML, only random 2-bit 
+numbers. Using a random number generator circuit element. I connected to the bottom right two pins because 
+they are corresponding to the first two powers of 2: 1 and 2. I then set a momentary pushbutton switch to 
+activate the number generator. To have the user input be checked to be correct I had wires from switches 
+and their corresponding port in the number generator to their each XNOR gates to an AND gate to an LED. 
+The XNOR gates would make sure only if both inputs (one switch and the corresponding slot in the number 
+generator) were the same, either both off or on. The AND gate would make sure both XNOR gates were true to 
+make the LED light up to show correctness. 
+
+I believe the number generator works by the internal clock inside the circuit somewhere that can use the
+current time from UNIX epoch and do some calculations to get a desired random number.
+
+Conclusion: 
+
+I learned how to transition from SoP to actual schematic design. By completing the lab I learn a great 
+amount in using logic with MML and problem solving in a new environment. I also learned you can model
+almost anything in MML. 

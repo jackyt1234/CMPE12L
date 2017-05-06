@@ -1,0 +1,51 @@
+//-----------------------------------------------
+
+Robert Loquinario - rloquina@ucsc.edu
+Lab #2
+Due April 23, 2017
+CMPE 12L Section B 
+MW 11:00 AM - 1:00 PM 
+TA: Max Lichtenstein
+
+//-----------------------------------------------
+
+Title: Adding and Subtracting
+
+Purpose:
+
+The objective of this lab was to learn how to use sequential and combinational logic that allows us to sum 
+or subtract a sequence of numbers together. Using MML I will develop my ability to build systems in a 
+modular way. I will design and test several components independently, before connecting those components
+into a larger system.
+
+Procedure:
+
+In order to create a running summer I needed an Input/Output page, register, adder, and inverter. All
+connected using senders and recievers in order for each part to talk to each other. Part 1
+had me start off the lab by creating a keypad with hexadecimal digits outputing a 4-bit binary number. 
+I then needed momentary buttons, 'Store' and 'Reset', to store a value in the register and to reset the 
+number stored. I also had 4 7-segement displays to show what was the running sum and output of the adder.
+I also had a switch to signify if addition or subtraction was going to happen.
+
+Part 2 of the lab I needed to create a register to store my values. I used 6 flip flops since we are only 
+working with 6-bit numbers. The flip-flops used were with the D latch being fed by the adder.
+I connected CLR inputs to the Reset button and CT inputs to the Store button. Then hooking up the outputs 
+of the flip flops to corresponding ports in the 2 7-segment displaying in hexadecimal in page 1. With the 
+2 most significant bits grounded since we are working with 6 bits. The inputs for the flip flops
+would be from the inverter in Part 4. 
+
+Part 3 was creating the 6-bit adder for adding and subtracting. Connecting the AddSub from the 
+addition/subtraction switch from page 1 to the carry bit since inverting for subtraction does not include 
+the adding of 1. Using 6 adders I was able to do binary addition which is easily able to do subtraction 
+with help with the inverter in part 4. The adder feeds into the register.
+
+Part 4 was where the inverting took place. I used inputs from the keyboard and used them as the inputs for
+6 MUXs, which outputs would be in respect to whether or not the AddSub switch was on or off. The enable 
+has a ground connected to it to enable the The output of
+the MUXs were then transfered to the Adder in page 3. 
+
+Conclusion:
+
+I found this lab to be one of the most challenging things for me to complete. It took a lot of 
+understanding of how multiplexers work and flipflops. In the end I actually came around to be happy
+with my ending results and how much I've learned, though stressful at times I managed to finish. 
